@@ -48,7 +48,7 @@
                     <div class="form-check-inline">
                         <input class="form-check-input" type="radio" name="type_id" value="{{ $type->id }}"
                             id="type_{{ $type->id }}"
-                            {{ in_array($type->id, $selectedTechnologies) ? 'checked' : '' }}>
+                            {{ in_array($type->id, $selectedTypes) ? 'checked' : '' }}>
                         <label class="form-check-label" for="type_{{ $type->id }}">
                             {{ $type->type }}
                         </label>

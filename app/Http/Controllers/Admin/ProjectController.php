@@ -74,11 +74,12 @@ class ProjectController extends Controller
 
     public function edit(Project $projects)
     {
-        $types = Type::orderByDesc('id')->get();
         $technologies = Technology::all();
         $selectedTechnologies = $projects->technologies()->pluck('id')->toArray();
+        $types = Type::all();
+        $selectedTypes = $projects->type()->pluck('id')->toArray();
 
-        return view('admin.projects.edit', compact('projects', 'types', 'technologies', 'selectedTechnologies'));
+        return view('admin.projects.edit', compact('projects', 'types','selectedTypes', 'technologies', 'selectedTechnologies'));
     }
 
     public function update(UpdateProjectRequest $request, Project $projects)

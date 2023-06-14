@@ -8,7 +8,7 @@
                     <h2>{{ $projects->title }}</h2>
                     <img height='400' class="mt-2 mb-2" src="{{ $projects->cover_image }}" alt="{{ $projects->title }}">
                     @if ($projects->type)
-                        <p>Project Type: {{ $projects->type->name }}</p>
+                        <strong>Project Type: {{ $projects->type->type }}</strong>
                     @else
                         <p>No Type associated</p>
                     @endif
