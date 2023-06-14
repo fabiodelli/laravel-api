@@ -1,8 +1,7 @@
 <?php
-
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use App\Http\Controllers\API\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,7 +19,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/projects', [ProjectController::Class, 'index']);
-    return response()->json([
-        'succes' => true,
-        'name' => 'fabio',
-    ]);
