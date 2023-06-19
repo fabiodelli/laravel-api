@@ -42,7 +42,6 @@ class ProjectController extends Controller
 
         $project = Project::create($val_data);
 
-
         $technologies = $request->input('technologies', []);
 
         if (!empty($technologies)) {
@@ -57,7 +56,6 @@ class ProjectController extends Controller
                 $project->save();
             }
         }
-
 
         return to_route('admin.projects.index')->with('message', 'Project Created Successfully');
     }
