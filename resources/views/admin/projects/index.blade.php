@@ -16,11 +16,9 @@
             <thead class="table-light">
 
                 <tr>
-                    <th>ID</i></th>
-                    <th>TITLE</th>
+                    <th>ID</th>
                     <th>IMG</th>
-                    <th>SLUG</th>
-                    <th>COMPLETED</th>
+                    <th>NAME</th>
                     <th>ACTIONS</th>
 
                 </tr>
@@ -33,8 +31,6 @@
                         <td scope="row">{{ $project->id }}</td>
                         <td><img height="100" src="{{ $project->cover_image }}" alt="{{ $project->title }}"></td>
                         <td>{{ $project->title }}</td>
-                        <td>{{ $project->slug }}</td>
-                        <td>{{ $project->completed }}</td>
 
                         <td>
                             <a name="show" id="show" class="btn btn-primary"

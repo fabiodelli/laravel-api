@@ -7,19 +7,20 @@
                 <div class="card d-flex p-3">
                     <h2>{{ $projects->title }}</h2>
                     <img height='400' class="mt-2 mb-2" src="{{ $projects->cover_image }}" alt="{{ $projects->title }}">
+                    <strong>Content</strong>
+                    <p>{{ $projects->content }}</p>
                     @if ($projects->type)
-                        <strong>Project Type: {{ $projects->type->type }}</strong>
+                        <strong>Project Type: <span class="bg-primary rounded-5 p-1 ps-2 pe-2 text-white ">{{ $projects->type->type }}</span></strong>
                     @else
                         <p>No Type associated</p>
                     @endif
-
-                    <strong class="mb-3">Technologies:</strong>
-                    <div class="d-flex">
+                    <span class="mt-2">
+                        <strong class="mb-3">Technologies:</strong>
                         @foreach ($technologies as $technology)
-                            <img class="me-3" height="70" src="{{ $technology->logo ?? 'N/A' }}"
+                            <img class="me-3" height="30" src="{{ $technology->logo ?? 'N/A' }}"
                                 alt="{{ $technology->name ?? 'N/A' }}">
                         @endforeach
-                    </div>
+                    </span>
 
                 </div>
             </div>
