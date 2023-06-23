@@ -55,13 +55,13 @@
                             <li class="nav-item">
                                 <a class="nav-link " href="#">
                                     <i class="fa-solid fa-bookmark"></i>
-                                    Categories
+                                    Technologies
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="#">
                                     <i class="fa-solid fa-tags"></i>
-                                    Tags
+                                    Type
                                 </a>
                             </li>
 
