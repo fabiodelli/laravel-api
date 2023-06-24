@@ -26,6 +26,7 @@ class StoreProjectRequest extends FormRequest
         return [
             'title'=>'required|max:150',
             'cover_image'=>'max:200',
+            'content'=>'max:1000'
         ];
     }
 }

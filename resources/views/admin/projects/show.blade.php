@@ -6,7 +6,7 @@
             <div class="col ">
                 <div class="card d-flex p-3">
                     <h2>{{ $projects->title }}</h2>
-                    <img height='400' class="mt-2 mb-2" src="{{ $projects->cover_image }}" alt="{{ $projects->title }}">
+                    <img  class="mt-2 mb-2" src="{{asset('img/' . $projects->cover_image) }}" alt="{{ $projects->title }}">
                     <strong>Content</strong>
                     <p>{{ $projects->content }}</p>
                     @if ($projects->type)

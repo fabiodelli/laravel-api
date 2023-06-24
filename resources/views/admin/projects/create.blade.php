@@ -7,22 +7,25 @@
 
     @include('partials.validation_errors')
 
-    <form action="{{ route('admin.projects.store') }}" method="post">
+    <form action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
                 aria-describedby="titleHelper" placeholder="Learn php">
-            <small id="titleHelper" class="form-text text-muted">Type the post title max 150 characters - must be
-                unique</small>
+            <small id="titleHelper" class="form-text text-muted">
+                Type the post title max 150 characters - must be unique
+            </small>
         </div>
+
         <div class="mb-3">
             <label for="cover_image" class="form-label">Image</label>
             <input type="text" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image"
                 id="cover_image" aria-describedby="cover_imageHelper" placeholder="Learn php">
-            <small id="cover_imageHelper" class="form-text text-muted">Type the post cover_image max 150 characters - must
-                be unique</small>
+            <small id="cover_imageHelper" class="form-text text-muted">
+                Type the post cover_image max 150 characters - must be unique
+            </small>
         </div>
 
         <div class="form-group">
@@ -45,7 +48,7 @@
             <br>
             @foreach ($types as $type)
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="type->id" value="{{ $type->id }}"
+                    <input class="form-check-input" type="radio" name="type_id" value="{{ $type->id }}"
                         id="type_{{ $type->id }}" {{ in_array($type->id, $selectedTypes) ? 'checked' : '' }}>
                     <label class="form-check-label" for="type_{{ $type->id }}">
                         {{ $type->type }}
@@ -53,8 +56,6 @@
                 </div>
             @endforeach
         </div>
-
-
 
         <div class="mb-3">
             <label for="content" class="form-label">Content</label>
