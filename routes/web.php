@@ -4,6 +4,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Mail\NewLead;
+use App\Models\Lead;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +22,11 @@ use App\Http\Controllers\Admin\ProjectController;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+route::get('/mailable', function () {
+    $lead = Lead::find(1);
+    return new NewLead($lead);
 });
 
 Route::get('/admin', [DashboardController::class, 'index'])->name('dashboard');
