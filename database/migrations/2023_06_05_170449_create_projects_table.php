@@ -17,8 +17,9 @@ return new class extends Migration {
             $table->string('title', '150')->unique();
             $table->string('slug');
             $table->string('cover_image')->nullable();
+            $table->string('full_image')->nullable();
             $table->text('content')->nullable();
-            $table->boolean('completed')->nullable();
+            $table->string('git')->nullable();
             $table->timestamps();
         });
     }

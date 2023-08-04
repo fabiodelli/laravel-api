@@ -23,7 +23,8 @@ class ProjectSeeder extends Seeder
             $project->slug = Str::slug($project->title, '-'); // 👈  Use me to generate a slug
             $project->content = $faker->paragraphs(asText: true); 
             $project->cover_image = $faker->imageUrl(category: 'Project', format: 'jpg');
-            $project->completed = $faker->boolean;
+            $project->full_image = $faker->imageUrl(category: 'Project', format: 'jpg');
+            $project->git = $faker->sentence(3);
             $project->save();
        }
     }
