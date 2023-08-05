@@ -15,18 +15,37 @@
             <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title"
                 aria-describedby="titleHelper" placeholder="Learn php">
             <small id="titleHelper" class="form-text text-muted">
-                Type the post title max 150 characters - must be unique
+                Type the project title max 150 characters - must be unique
             </small>
         </div>
 
         <div class="mb-3">
-            <label for="cover_image" class="form-label">Image</label>
+            <label for="cover_image" class="form-label">Cover image</label>
             <input type="text" class="form-control @error('cover_image') is-invalid @enderror" name="cover_image"
                 id="cover_image" aria-describedby="cover_imageHelper" placeholder="Learn php">
             <small id="cover_imageHelper" class="form-text text-muted">
-                Type the post cover_image max 150 characters - must be unique
+                Type the name cover_image max 150 characters - must be unique
             </small>
         </div>
+
+        <div class="mb-3">
+            <label for="full_image" class="form-label">Full image</label>
+            <input type="text" class="form-control @error('full_image') is-invalid @enderror" name="full_image"
+                id="full_image" aria-describedby="full_imageHelper" placeholder="Learn php">
+            <small id="full_imageHelper" class="form-text text-muted">
+                Type the name full_image max 150 characters - must be unique
+            </small>
+        </div>
+
+        <div class="mb-3">
+            <label for="git" class="form-label">Github link</label>
+            <input type="text" class="form-control @error('git') is-invalid @enderror" name="git"
+                id="git" aria-describedby="gitHelper" placeholder="Learn php">
+            <small id="gitHelper" class="form-text text-muted">
+                Type the Git link max 150 characters - must be unique
+            </small>
+        </div>
+
 
         <div class="form-group">
             <label class="mb-2" for="technologies">Technologies</label>

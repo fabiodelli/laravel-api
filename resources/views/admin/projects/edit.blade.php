@@ -24,6 +24,22 @@
             <small id="cover_imageHelper" class="form-text text-muted">Type the post cover_image max 150 characters - must
                 be unique</small>
         </div>
+        <div class="mb-3">
+            <label for="full_image" class="form-label">Image</label>
+            <input type="text" class="form-control @error('full_image') is-invalid @enderror" name="full_image"
+                id="full_image" aria-describedby="full_imageHelper" placeholder="Learn php"
+                value="{{ old('full_image', $projects->full_image) }}">
+            <small id="full_imageHelper" class="form-text text-muted">Type the post full_image max 150 characters - must
+                be unique</small>
+        </div>
+        <div class="mb-3">
+            <label for="git" class="form-label">Image</label>
+            <input type="text" class="form-control @error('git') is-invalid @enderror" name="git"
+                id="git" aria-describedby="gitHelper" placeholder="Learn php"
+                value="{{ old('git', $projects->git) }}">
+            <small id="gitHelper" class="form-text text-muted">Type the post git max 150 characters - must
+                be unique</small>
+        </div>
 
         <div class="form-group">
             <label class="mb-2" for="technologies">Technologies</label>
