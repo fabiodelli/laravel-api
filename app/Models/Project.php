@@ -12,7 +12,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'content', 'cover_image', 'completed', 'slug'];
+    protected $fillable = ['title', 'content', 'cover_image','full_image', 'git', 'slug'];
 
     public function technologies():BelongsToMany
     {
